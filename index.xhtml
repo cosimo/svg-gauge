@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+<title>SVG Gauge example</title>
+<script language="javascript" src="gauge.js"></script>
+<!-- <link rel="stylesheet" type="text/css" media="all" href="css/synoptic.css"/> -->
+</head>
+
+<body onload="document.getElementById('gauge_value').focus()">
+
+<h1>SVG Gauge example</h1>
+
+<p>
+This is a simple example of an SVG enabled gauge control.
+Change form values to update the gauge control.
+This may not work in Internet Explorer.
+</p>
+
+<div class="gauge" style="float: left; margin-right: 20px; margin-top: -10px">
+<object id="gauge1" type="image/svg+xml" data="gauge.svg" width="127" height="122"/>
+</div>
+
+<form>
+Gauge value <input type="text" value="0" id="gauge_value" size="5" maxlength="6"/><br/>
+Gauge scale <input type="text" value="100" id="gauge_scale" size="5" maxlength="6"/><br/>
+<input type="checkbox" checked="1" id="gauge_percent"/> Percent?<br/>
+<br/>
+<input type="submit" value="Update gauge"
+    onclick="update_gauge('gauge1',this.form.gauge_value.value,this.form.gauge_scale.value,this.form.gauge_percent.checked);return false;"
+/>
+</form>
+
+</body>
+</html>
+

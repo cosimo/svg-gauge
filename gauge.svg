@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g name="gauge" width="122px" height="127px">
+        <image xlink:href="gauge.png" width="122" height="127"/>
+	<circle id="led" cx="39" cy="76" r="5" style="fill: #999; stroke: none">
+	    <animateColor id="ledAnimation" attributeName="fill" attributeType="css" begin="0s" dur="1s"
+	    values="none;#f88;#f00;#f88;none;" repeatCount="0"/>
+	</circle>
+        <g id="needle" transform="rotate(0,62,62)">
+            <circle cx="62" cy="62" r="4" style="fill: #c00; stroke: none"/>
+            <rect transform="rotate(-130,62,62)" name="arrow"  x="58" y="38" width="8" height="24" style="fill: #c00; stroke: none"/>
+            <polygon transform="rotate(-130,62,62)" points="58,39,66,39,62,30,58,39" style="fill: #c00; stroke: none"/>
+        </g>
+        <text id="value" x="51" y="98" focusable="false" editable="no" style="stroke:none; fill:#fff; font-family: monospace; font-size: 12px"></text>
+    </g>
+</svg>

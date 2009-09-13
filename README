@@ -1,0 +1,8 @@
+An attempt to write a full-SVG gauge control
+that can be integrated easily in a HTML page
+and controlled by simple Javascript functions.
+
+Should work if your browser has a good SVG support,
+Opera for example.
+
+Cosimo, July 2008
